@@ -1,0 +1,22 @@
+.boxBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  font-family: "Bebas Neue", cursive;
+  cursor: pointer;
+  outline: none;
+  border: inherit;
+  border-radius: 15px;
+  background-color: rgba(60, 255, 0, 0.63);
+  box-shadow: 1px 2px 2px 0 rgb(0 0 0 / 0.5);
+  transition: box-shadow 250ms linear;
+}
+.button:hover {
+  box-shadow: 2px 5px 2px 0 rgb(0 0 0 / 0.5);
+}
