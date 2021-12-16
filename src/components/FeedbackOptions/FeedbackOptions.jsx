@@ -1,20 +1,22 @@
 import PropTypes from "prop-types";
 import style from "./FeedbackOptions.module.css";
 
-const FeedbackOptions = ({ options, onLeaveFeedback }) => (
-  <div className={style.boxBtn}>
-    {options.map((name, id) => (
-      <button
-        key={id}
-        className={style.button}
-        type="button"
-        onClick={() => onLeaveFeedback({ name })}
-      >
-        {name}
-      </button>
-    ))}
-  </div>
-);
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+  return (
+    <div className={style.boxBtn}>
+      {options.map((option) => (
+        <button
+          key={option}
+          className={style.button}
+          type="button"
+          onClick={() => onLeaveFeedback(option)}
+        >
+          {option}
+        </button>
+      ))}
+    </div>
+  );
+};
 
 FeedbackOptions.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string),
